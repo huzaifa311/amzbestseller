@@ -45,5 +45,10 @@ app.post("/form", async (req, res) => {
     }
 });
 
+
+app.get("/", (req, res) => {
+    res.send("Form Submission API is running");
+});
+
 // --- Start server --------------------------------------------------
 app.listen(PORT, () => console.log(`API running on port ${PORT}`));
