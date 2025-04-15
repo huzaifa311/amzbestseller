@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/form", async (req, res) => {
-    const { name, email, phone, desc = "", submitted_at } = req.body;
+    const { name, email, phone, desc = "", services="", submitted_at } = req.body;
 
     if (!name || !email || !phone || !submitted_at) {
         return res.status(400).send("Missing required fields");
@@ -33,6 +33,7 @@ app.post("/form", async (req, res) => {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Services:</strong> ${services}</p>
         <p><strong>Description:</strong> ${desc}</p>
         <p><strong>Submitted At:</strong> ${submitted_at}</p>
       `
