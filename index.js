@@ -26,7 +26,7 @@ app.post("/form", async (req, res) => {
 
         await transporter.sendMail({
             from: "huzaifatemp312@gmail.com",
-            to: "info@amzbestseller.com",
+            to: "info@amzbestseller.us",
             subject: "New Form Submission",
             html: `
         <h1>New Form Submission</h1>
@@ -52,4 +52,4 @@ app.get("/", (req, res) => {
 });
 
 // --- Start server --------------------------------------------------
-app.listen(PORT, () => console.log(`API running on port ${PORT}`));
+app.listen(PORT, () => console.log(`API running on port ${PORT}`));      
