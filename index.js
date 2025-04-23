@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors('*'));
+app.use(cors());
 
 app.post("/form", async (req, res) => {
     const { name, email, phone, desc = "", services="", submitted_at } = req.body;
@@ -26,7 +26,7 @@ app.post("/form", async (req, res) => {
 
         await transporter.sendMail({
             from: "huzaifatemp312@gmail.com",
-            to: "info@amzbestseller.us",
+            to: "info@amzbestseller.com",
             subject: "New Form Submission",
             html: `
         <h1>New Form Submission</h1>
