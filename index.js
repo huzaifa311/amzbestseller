@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors('*'));
 
 app.post("/form", async (req, res) => {
     const { name, email, phone, desc = "", services="", submitted_at } = req.body;
