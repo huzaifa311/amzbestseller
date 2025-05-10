@@ -26,7 +26,7 @@ app.post("/form", async (req, res) => {
 
         await transporter.sendMail({
             from: "huzaifatemp312@gmail.com",
-            to: "info@amzbestsellers.us",
+            to: "info@amzebookpublication.com",
             subject: "New Form Submission",
             html: `
         <h1>New Form Submission</h1>
